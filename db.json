@@ -1,0 +1,39 @@
+{
+  "feedback": [
+    {
+      "id": "1",
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "rating": 5,
+      "comments": "Excellent service and intuitive design. The new rating bar looks great!"
+    },
+    {
+      "id": "2",
+      "name": "Bob Smith",
+      "email": "bob@example.com",
+      "rating": 4,
+      "comments": "A few minor UI glitches, but overall a solid experience. Great work."
+    },
+    {
+      "id": "3",
+      "name": "Charlie Brown",
+      "email": "charlie@example.com",
+      "rating": 3,
+      "comments": "It was okay. Functional, but could use more features."
+    },
+    {
+      "id": "c994",
+      "name": "venkat",
+      "email": "srav@gmail.com",
+      "rating": 1,
+      "comments": "its glitchy and freexing"
+    },
+    {
+      "id": "448e",
+      "name": "mahesh",
+      "email": "mahesh@india.in",
+      "rating": 3,
+      "comments": "this is a mediocre project"
+    }
+  ]
+}

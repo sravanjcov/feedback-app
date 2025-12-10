@@ -1,0 +1,113 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+    /* Set the card as the reference for the absolutely positioned number */
+    position: relative; 
+    
+    /* 🚨 CRITICAL FIX: Add enough padding to the top of the card
+       to make room for the bubble to stick out without being cut off. 
+       Adjust this value if needed. */
+    padding-top: 30px; 
+    
+    /* Ensure other paddings are reasonable */
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+.read-the-docs {
+  color: #888;
+}
+
+/* --- APP LAYOUT (HALF-SCREEN GRID) --- */
+
+/* Ensures the container doesn't get too wide on huge screens */
+.container {
+    max-width: 1400px; /* Increased max width slightly */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Base Grid Styles */
+.main-app-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: Single column for mobile */
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Tablet/Desktop Layout: Two Columns (1/3 and 2/3 split) */
+@media (min-width: 900px) {
+    .main-app-grid {
+        /* Define the columns: Left (Stats/Reviews) is 1 unit, Right (Form) is 2 units */
+        grid-template-columns: 1fr 2fr;
+    }
+
+    /* Important: Set a minimum width on the flexible column to prevent collapse */
+    .stats-and-list-section {
+        min-width: 350px; /* Ensure space for the carousel */
+        padding-right: 2rem; 
+        border-right: 1px solid var(--color-border); /* Visual separator */
+    }
+}
+
+
+/* --- FEEDBACK LIST (SCROLLABLE CAROUSEL) --- */
+.feedback-carousel {
+    /* Corrected: Use overflow-y: hidden. Horizontal scrolling is handled by overflow-x: auto. */
+    overflow-y: hidden; /* Prevent vertical scrollbar unless explicitly needed for the reviews themselves */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem; 
+ 
+}
+.feedback-carousel-inner {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+.carousel-item-wrapper {
+
+    flex: 0 0 calc(min(100%, 400px)); /* Changed 500px cap to 400px for better fit */
+    scroll-snap-align: start;
+}
+/* Hide scrollbar for cleaner design */
+.feedback-carousel::-webkit-scrollbar {
+    display: none;
+}
+.feedback-carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
